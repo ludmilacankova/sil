@@ -1,0 +1,424 @@
+body {
+  background: $white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $breakpointComputer) {
+    font-size: 16px;
+  }
+}
+
+.container {
+  width: 100%; // výchozí pro mobil
+  max-width: 100%;
+  //min-height: 600px;
+
+  margin: $spacing auto;
+
+  background: white;
+  border: 1px solid $black;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+// Tablet: pevná šířka
+@media (min-width: $breakpointTablet) {
+  .container {
+    width: $breakpointTablet;
+    max-width: none;
+  }
+}
+
+// Desktop: větší pevná šířka
+@media (min-width: $breakpointComputer) {
+  .container {
+    width: 1024px;
+  }
+}
+
+//---------- footer ----------
+.footer {
+  color: $white;
+  background: $black;
+
+  padding: $spacing;
+  margin: $spacing 0 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.footer__contact {
+  margin-right: $spacing * 2;
+
+  img {
+    max-height: 16px;
+    margin-right: $spacing;
+  }
+}
+
+.footer__social {
+  img {
+    max-height: 24px;
+  }
+}
+
+.footer__social a img {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(98%) saturate(437%)
+    hue-rotate(137deg) brightness(102%) contrast(102%);
+  transition: filter 0.3s ease;
+}
+
+.footer__social a:hover img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(953%)
+    hue-rotate(140deg) brightness(92%) contrast(97%);
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  margin: $spacing 0 0 0;
+
+  @media (min-width: $breakpointComputer) {
+    font-size: 1rem;
+  }
+}
+//------------------------------
+
+//---------- navigation ----------
+.logo {
+  img {
+    height: 48px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: $black;
+  border-bottom: 1px solid $black;
+  border-left: 1px solid $black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: $white;
+}
+
+.nav {
+  position: relative;
+  margin-top: $spacing;
+}
+
+.nav-header {
+  padding: $spacing;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $white;
+}
+
+.nav-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 60%;
+  height: auto;
+  background-color: $colorComplementaryLight;
+  z-index: 1000;
+
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(100%);
+}
+
+.nav-list.open {
+  display: flex;
+
+  transform: translateX(0);
+}
+
+.nav-list.open {
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: $colorPrimaryDark;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: $black;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: $breakpointTablet) {
+  .nav-header {
+    flex-wrap: nowrap;
+  }
+
+  .nav-list {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: $white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-bottom: 0.4rem;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $colorPrimary;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &.active::after {
+      transform: scaleX(1);
+    }
+
+    &:hover {
+      color: $colorPrimary;
+      font-weight: 400;
+    }
+
+    &.active {
+      color: $colorPrimary;
+      font-weight: 600;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpointComputer) {
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  .nav {
+    max-width: $pageMaxWidth;
+    margin: 0 auto;
+  }
+}
+//------------------------------
+
+//---------- section ----------
+.section {
+  margin: $spacing;
+
+  a,
+  a:visited {
+    color: $black;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  a:hover,
+  a:focus {
+    color: $colorPrimary;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: $spacing * 2;
+
+    li {
+      position: relative;
+      padding-left: $spacing * 2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4em;
+        width: 0;
+        height: 0;
+        border-left: 0.4em solid transparent;
+        border-right: 0.4em solid transparent;
+        border-bottom: 0.6em solid $colorPrimary;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.intro {
+  max-width: $breakpointTablet;
+}
+
+.boxs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $breakpointComputer) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.box {
+  width: $boxWidth;
+  margin: $spacing 0;
+
+  background: $colorComplementaryLight;
+
+  border: 1px solid $colorPrimaryDark;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $breakpointTablet) {
+    width: $boxWidth * 1.4;
+    flex-direction: row;
+  }
+
+  @media (min-width: $breakpointComputer) {
+    width: $boxWidth;
+    flex-direction: column;
+  }
+}
+
+.portret {
+  margin: $spacing;
+}
+
+.medailon {
+  margin: $spacing;
+}
+
+//------------------------------
+
+//---------- download ----------
+.download {
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing;
+
+    img {
+      width: 32px;
+      height: auto;
+      padding-right: $spacing * 0.4;
+    }
+  }
+}
+//------------------------------
+
+//---------- spinner ----------
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 4px solid $colorComplementary;
+  border-top-color: $colorPrimary;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.message {
+  margin-top: $spacing * 2;
+  background-color: $colorComplementaryLight;
+  color: $colorPrimary;
+  font-size: $fontSize-h3;
+}
+
+//------------------------------
+
+//---------- reference ----------
+.reference {
+  li {
+    margin: $spacing 0;
+  }
+
+  .target {
+    color: $colorPrimaryDark;
+  }
+}
+
+select {
+  padding: $spacing;
+  border: 1px solid $black;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+select:focus {
+  outline: 2px solid $colorPrimary;
+  outline-offset: 2px;
+}
+//------------------------------

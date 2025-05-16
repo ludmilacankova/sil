@@ -1,0 +1,49 @@
+{
+    "id": 1,
+    "date": "2025-05-10",
+    "name": "Markéta J.",
+    "target": "Kurz Excelu",
+    "review": "Obávala jsem se, zda jsem si zvolila odpovídající úroveň kurzu a budu stačit výkladu, ale tempo a názorné vysvětlení zajistily, že jsem dokázala držet krok po celou dobu kurzu a odnesla si z něj mnoho nových poznatků."
+  },
+  {
+    "id": 2,
+    "date": "2025-03-11",
+    "name": "Milan S.",
+    "target": "Zastupování na úřadech",
+    "review": "Pochvala paní Sedláčkové za ochotu a vstřícné jednání, za nesmírnou pomoc při vyřizování důchodu."
+  },
+  {
+    "id": 3,
+    "date": "2025-04-02",
+    "name": "Jan Č.",
+    "target": "Kurz Excelu",
+    "review": "Paní lektorka byla profesionál :-) Spokojenost s obsahem i formou školení."
+  },
+  {
+    "id": 4,
+    "date": "2025-03-28",
+    "name": "Pavel F.",
+    "target": "Kurz marketingu",
+    "review": "Lektor je člověk na správném místě. Mnoho zkušeností z praxe a vřelý přístup."
+  },
+  {
+    "id": 5,
+    "date": "2025-03-28",
+    "name": "Šárka N.",
+    "target": "Kurz Excelu",
+    "review": "Lektorka byla trpělivá a vše krásně vysvětlila."
+  },
+  {
+    "id": 6,
+    "date": "2025-02-17",
+    "name": "Svatava K.",
+    "target": "Kurz účetnictví",
+    "review": "Paní Sedláčková byla velice ochotná, v případě potřeby vždy poradila a dovysvětlila. Témata, která se nevešla do základní doby kurzu pak ještě konzultovala individuálně."
+  },
+  {
+    "id": 7,
+    "date": "2025-02-14",
+    "name": "Petr J.",
+    "target": "Kurz Excelu",
+    "review": "Jsem maximálně spokojen. Je to odborník na své místě, který má bohaté zkušenosti z praxe a bylo to vidět během celého konání kurzu. Veškeré naše dotazy zodpověděl a řekl i mnoho navíc. Mohu jen doporučit."
+  }

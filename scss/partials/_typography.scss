@@ -1,0 +1,42 @@
+//----------nastavení textu----------
+
+html {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: $fontSizeBase;
+}
+
+body {
+  font-size: $fontSizeBase;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 440;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $fontSize-h1;
+}
+
+h2 {
+  font-size: $fontSize-h2;
+  margin-top: $spacing;
+}
+
+h3 {
+  font-size: $fontSize-h3;
+  color: $colorPrimaryDark;
+  margin-top: $spacing;
+}
